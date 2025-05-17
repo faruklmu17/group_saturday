@@ -19,7 +19,9 @@ class BaseTest:
 
     @pytest.fixture(scope="function")
     def context(self, browser):
+
         """Create a new context for each test (optional)."""
         context = browser.new_context()
         yield context
         context.close()
+        print("This is my branch")
